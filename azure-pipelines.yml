@@ -8,9 +8,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CopyFiles@1
+- task: CopyFiles@2
   inputs:
-    SourceFolder: '101-webapp-linux-managed-mysql'
+    SourceFolder: 'azure-quickstart-templates/101-webapp-linux-managed-mysql'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
