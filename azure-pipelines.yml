@@ -8,11 +8,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '101-webapp-linux-managed-mysql'
-    Contents: '**'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
