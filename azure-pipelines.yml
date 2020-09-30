@@ -10,10 +10,9 @@ pool:
 steps:
 - task: CopyFiles@2
   inputs:
-    SourceFolder: 'azure-quickstart-templates/101-webapp-linux-managed-mysql'
+    SourceFolder: '101-webapp-linux-managed-mysql'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
-
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Resource Group'
